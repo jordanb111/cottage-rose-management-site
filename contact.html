@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Cottage Rose Property Management | New Braunfels, TX</title>
-  <meta name="description" content="Tell us about your property. Cottage Rose Property Management follows up within one business day on rentals across New Braunfels, San Antonio, San Marcos, and Austin.">
+  <meta name="description" content="Tell us about your property. Cottage Rose Property Management follows up within one business day on residential, multifamily, and commercial properties across New Braunfels, San Antonio, San Marcos, and Austin.">
   <link rel="canonical" href="https://www.cottagerosemanagement.com/contact.html"> <!-- TODO: confirm final domain -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
@@ -86,14 +86,26 @@
                   <input type="tel" id="phone" name="phone" required autocomplete="tel">
                 </div>
                 <div class="form-row">
-                  <label for="units">Number of Units <span aria-hidden="true">*</span></label>
-                  <input type="text" id="units" name="units" required placeholder="e.g. 1, 4, 24, 100">
+                  <label for="property-type">Property Type <span aria-hidden="true">*</span></label>
+                  <select id="property-type" name="property_type" required>
+                    <option value="" disabled selected>Select one&hellip;</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Multifamily">Multifamily</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
               </div>
 
-              <div class="form-row">
-                <label for="address">Property Address(es) <span aria-hidden="true">*</span></label>
-                <input type="text" id="address" name="address" required autocomplete="street-address">
+              <div class="form-row-group cols-2">
+                <div class="form-row">
+                  <label for="units">Number of Units <span aria-hidden="true">*</span></label>
+                  <input type="text" id="units" name="units" required placeholder="e.g. 1, 4, 24, 100">
+                </div>
+                <div class="form-row">
+                  <label for="address">Property Address(es) <span aria-hidden="true">*</span></label>
+                  <input type="text" id="address" name="address" required autocomplete="street-address">
+                </div>
               </div>
 
               <div class="form-row">
@@ -160,7 +172,7 @@
             </span>
             Cottage Rose Property Management
           </a>
-          <p>Local, in-house leasing and maintenance across New Braunfels, San Antonio, San Marcos, and Austin.</p>
+          <p>Local, in-house leasing and maintenance for residential, multifamily, and commercial properties across New Braunfels, San Antonio, San Marcos, and Austin.</p>
         </div>
         <div>
           <h4>Contact</h4>
