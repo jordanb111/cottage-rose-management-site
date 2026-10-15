@@ -226,13 +226,21 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
 }
-.hero .container { width: 100%; padding-top: clamp(4rem, 8vw, 6rem); padding-bottom: clamp(5rem, 9vw, 8rem); }
+/* soft navy tint, strongest behind the text and fading out across the skyline */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(20, 48, 74, 0.6) 0%, rgba(20, 48, 74, 0.52) 52%, rgba(20, 48, 74, 0.2) 68%, rgba(20, 48, 74, 0) 86%);
+}
+.hero .container { width: 100%; padding-top: clamp(4rem, 8vw, 6rem); padding-bottom: clamp(9rem, 17vw, 16rem); }
 .hero-copy { color: var(--white); }
 .hero-copy h1, .hero-copy .lede { color: var(--white); }
 .hero .btn-primary { background: var(--white); color: var(--navy); border-color: var(--white); }
@@ -241,7 +249,7 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .hero .btn-ghost:hover { background: var(--white); color: var(--navy); }
 .hero a:focus-visible { outline-color: var(--white); }
 .hero-headline { max-width: 20em; margin-bottom: 1.5rem; }
-.hero-headline { -webkit-text-stroke: 6px var(--ink); paint-order: stroke fill; stroke-linejoin: round; }
+.hero-copy h1, .hero-copy .lede { text-shadow: 0 1px 3px rgba(8, 22, 36, 0.55), 0 4px 28px rgba(8, 22, 36, 0.7); }
 .hero-headline::after { content: ""; display: block; width: 96px; height: 6px; margin-top: 1rem; background: var(--gold); }
 .hero-copy .lede { margin-bottom: 0; max-width: 52ch; font-size: 1.5rem; font-weight: 500; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
