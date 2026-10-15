@@ -537,6 +537,7 @@ textarea { resize: vertical; min-height: 128px; }
   .footer-grid > :nth-child(n+2) { grid-column: span 3; }
 }
 .footer-brand { color: var(--white); margin-bottom: 1rem; }
+.footer-grid > :first-child p { max-width: 28rem; }
 .site-footer h2 { font-size: 1rem; color: var(--white); margin-bottom: 1rem; }
 .site-footer a { color: var(--white); text-decoration: none; }
 .site-footer li a { display: inline-block; padding: 0.75rem 0; margin: -0.75rem 0; }
