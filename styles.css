@@ -311,11 +311,14 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 
 /* ---------- audience ---------- */
 .audience-section .container { display: grid; gap: 3rem var(--gutter); align-items: center; }
-.owner-card { position: relative; overflow: hidden; display: flex; align-items: flex-end; aspect-ratio: 4 / 3; padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--navy); color: var(--white); }
-.owner-mark { position: absolute; top: 7%; right: 5%; width: 42%; height: auto; }
-.owner-stat { position: relative; margin: 0; display: flex; flex-direction: column; }
-.owner-stat .num { font-family: var(--font-head); font-weight: 800; font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1; }
-.owner-stat .label { margin-top: 0.75rem; font-family: var(--font-head); font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.corridor-map { margin: 0; }
+.corridor-map svg { display: block; width: 100%; height: auto; }
+.corridor-map text { font-family: var(--font-head); fill: var(--navy); }
+.cm-city text { font-weight: 700; font-size: 30px; }
+.cm-city .cm-home { font-weight: 800; font-size: 36px; }
+.cm-city .cm-sub { font-family: var(--font-sans); font-weight: 600; font-size: 24px; }
+.cm-foot { font-size: 22px !important; }
+.cm-leg text { font-family: var(--font-sans); font-weight: 600; font-size: 20px; text-anchor: middle; }
 @media (min-width: 900px) {
   .audience-section .container { grid-template-columns: repeat(12, 1fr); }
   .audience-visual { grid-column: span 5; }
