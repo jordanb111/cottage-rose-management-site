@@ -228,8 +228,8 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   position: relative;
   isolation: isolate;
   display: flex;
-  align-items: center;
-  min-height: clamp(32rem, 72vh, 46rem);
+  align-items: flex-end;
+  min-height: clamp(36rem, 90vh, 56rem);
   padding: 0;
   background: var(--navy);
 }
@@ -240,27 +240,23 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center 30%;
 }
-.hero .container { width: 100%; padding-top: clamp(4rem, 8vw, 6rem); padding-bottom: clamp(4rem, 8vw, 6rem); }
-.hero-copy { background: var(--white); padding: clamp(2rem, 4vw, 3.5rem); }
-.hero-headline { margin-bottom: 1.5rem; }
-.hero-headline span { display: block; }
-.hero-headline .accent { position: relative; display: block; padding-bottom: 1rem; }
-.hero-headline .accent::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 96px;
-  height: 6px;
-  background: var(--gold);
-}
-.hero-copy .lede { margin-bottom: 0; }
+.hero .container { width: 100%; padding-top: clamp(4rem, 8vw, 6rem); padding-bottom: clamp(3rem, 5vw, 4rem); }
+.hero-copy { color: var(--white); }
+.hero-copy h1, .hero-copy .lede { color: var(--white); }
+.hero .btn-primary { background: var(--white); color: var(--navy); border-color: var(--white); }
+.hero .btn-primary:hover { background: transparent; color: var(--white); }
+.hero .btn-ghost { color: var(--white); border-color: var(--white); }
+.hero .btn-ghost:hover { background: var(--white); color: var(--navy); }
+.hero a:focus-visible { outline-color: var(--white); }
+.hero-headline { max-width: 20em; margin-bottom: 1.5rem; }
+.hero-headline::after { content: ""; display: block; width: 96px; height: 6px; margin-top: 1rem; background: var(--gold); }
+.hero-copy .lede { margin-bottom: 0; max-width: 52ch; font-size: 1.5rem; font-weight: 500; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
 @media (min-width: 900px) {
   .hero .container { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
-  .hero-copy { grid-column: 1 / span 7; }
+  .hero-copy { grid-column: 1 / span 10; }
 }
 
 /* ---------- layout helpers ---------- */
