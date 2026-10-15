@@ -232,7 +232,7 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   object-fit: cover;
   object-position: center 30%;
 }
-.hero .container { width: 100%; padding-top: clamp(4rem, 8vw, 6rem); padding-bottom: clamp(3rem, 5vw, 4rem); }
+.hero .container { width: 100%; padding-top: clamp(4rem, 8vw, 6rem); padding-bottom: clamp(5rem, 9vw, 8rem); }
 .hero-copy { color: var(--white); }
 .hero-copy h1, .hero-copy .lede { color: var(--white); }
 .hero .btn-primary { background: var(--white); color: var(--navy); border-color: var(--white); }
