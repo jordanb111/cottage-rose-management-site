@@ -380,7 +380,11 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 }
 
 /* ---------- closing CTA ---------- */
-.cta-band { border-top: 2px solid var(--navy); }
+.cta-band { background: var(--navy); color: var(--white); }
+.cta-band h2 { color: var(--white); }
+.cta-band .btn-primary { background: var(--white); color: var(--navy); border-color: var(--white); }
+.cta-band .btn-primary:hover { background: transparent; color: var(--white); }
+.cta-band a:focus-visible { outline-color: var(--white); }
 .cta-band .container > div { display: grid; gap: 1rem var(--gutter); align-items: end; }
 .cta-band h2, .cta-band .lede { margin: 0; }
 .cta-band .hero-actions { margin-top: 1rem; }
@@ -525,7 +529,7 @@ textarea { resize: vertical; min-height: 128px; }
 }
 
 /* ---------- footer ---------- */
-.site-footer { background: var(--navy); color: var(--white); padding: 4rem 0 1.5rem; }
+.site-footer { background: var(--navy); color: var(--white); padding: 4rem 0 1.5rem; border-top: 3px solid var(--gold); }
 .footer-grid { display: grid; gap: 2rem var(--gutter); margin-bottom: 3rem; }
 @media (min-width: 700px) {
   .footer-grid { grid-template-columns: repeat(12, 1fr); }
