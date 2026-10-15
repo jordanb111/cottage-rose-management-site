@@ -310,20 +310,7 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .section-head.align-left { margin-left: 0; }
 
 /* ---------- audience ---------- */
-.audience-section .container { display: grid; gap: 3rem var(--gutter); align-items: center; }
-.corridor-map { margin: 0; }
-.corridor-map svg { display: block; width: 100%; height: auto; }
-.corridor-map text { font-family: var(--font-head); fill: var(--navy); }
-.cm-city text { font-weight: 700; font-size: 30px; }
-.cm-city .cm-home { font-weight: 800; font-size: 36px; }
-.cm-city .cm-sub { font-family: var(--font-sans); font-weight: 600; font-size: 24px; }
-.cm-foot { font-size: 22px !important; }
-.cm-leg text { font-family: var(--font-sans); font-weight: 600; font-size: 20px; text-anchor: middle; }
-@media (min-width: 900px) {
-  .audience-section .container { grid-template-columns: repeat(12, 1fr); }
-  .audience-visual { grid-column: span 5; }
-  .audience-visual + * { grid-column: span 7; }
-}
+.audience-section .container > div { max-width: 56rem; }
 
 /* ---------- differentiator + reasons ---------- */
 .differentiator { border-top: 1px solid var(--navy); padding: clamp(2rem, 4vw, 2.5rem) 0; margin-bottom: 3rem; }
