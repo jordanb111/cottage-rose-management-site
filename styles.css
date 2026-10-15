@@ -328,14 +328,15 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .corridor-city {
   display: grid;
   grid-template-columns: 3rem 1fr auto;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--white);
 }
 .corridor-city .city-index { font-family: var(--font-head); font-weight: 700; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
 .corridor-city .city-name { font-family: var(--font-head); font-weight: 700; font-size: 1.25rem; }
-.corridor-city .city-tag { font-size: 1rem; font-weight: 600; text-align: right; }
+.corridor-city .city-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1rem; font-weight: 600; text-align: right; }
+.city-star { flex: none; width: 24px; height: 24px; color: var(--gold); }
 
 /* ---------- what we do: open columns, navy rule on top ---------- */
 .wwd-grid { display: grid; gap: 2rem var(--gutter); }
