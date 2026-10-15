@@ -54,6 +54,42 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
+  /* ---------- hero slideshow: 10s cross-fade, pausable ---------- */
+  var slides = document.querySelectorAll(".hero-slide");
+  if (slides.length > 1) {
+    var dots = document.querySelectorAll(".hero-dot");
+    var pauseBtn = document.querySelector(".hero-pause");
+    var current = 0;
+    var timer = null;
+    var INTERVAL = 10000;
+
+    var show = function (i) {
+      current = (i + slides.length) % slides.length;
+      slides.forEach(function (s, n) { s.classList.toggle("is-active", n === current); });
+      dots.forEach(function (d, n) { d.setAttribute("aria-current", n === current ? "true" : "false"); });
+    };
+    var stop = function () { clearInterval(timer); timer = null; };
+    var play = function () { stop(); timer = setInterval(function () { show(current + 1); }, INTERVAL); };
+    var setPaused = function (paused) {
+      pauseBtn.classList.toggle("is-paused", paused);
+      pauseBtn.setAttribute("aria-label", paused ? "Play slideshow" : "Pause slideshow");
+      if (paused) { stop(); } else { play(); }
+    };
+
+    pauseBtn.addEventListener("click", function () { setPaused(!pauseBtn.classList.contains("is-paused")); });
+    dots.forEach(function (d, n) {
+      d.addEventListener("click", function () {
+        show(n);
+        if (!pauseBtn.classList.contains("is-paused")) { play(); }
+      });
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { stop(); }
+      else if (!pauseBtn.classList.contains("is-paused")) { play(); }
+    });
+    setPaused(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }
+
   /* ---------- contact form (Formspree AJAX) ---------- */
   var form = document.getElementById("contact-form");
   if (!form) return;

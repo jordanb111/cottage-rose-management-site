@@ -49,7 +49,11 @@
 
     <!-- ================= HERO ================= -->
     <section class="hero">
-      <img class="hero-bg" src="assets/austin-skyline.jpg" width="2400" height="897" alt="" fetchpriority="high">
+      <div class="hero-slides" role="group" aria-roledescription="carousel" aria-label="Photos of Central Texas">
+        <img class="hero-slide is-active" src="assets/austin-skyline.jpg" width="2400" height="897" alt="" fetchpriority="high">
+        <img class="hero-slide" src="assets/hillcountry-hero.jpg" width="2400" height="1220" alt="" loading="lazy" decoding="async">
+        <img class="hero-slide" src="assets/comal-river-hero.jpg" width="1801" height="888" alt="" loading="lazy" decoding="async">
+      </div>
       <div class="container">
         <div class="hero-copy">
           <h1 class="hero-headline">Management for Owners Who Expect More</h1>
@@ -57,6 +61,16 @@
           <div class="hero-actions">
             <a href="contact.html" class="btn btn-primary">Get in Touch</a>
             <a href="services.html" class="btn btn-ghost">See What We Do</a>
+          </div>
+        </div>
+        <div class="hero-controls">
+          <button type="button" class="hero-pause" aria-label="Pause slideshow">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/><path class="i-play" d="M8 5l11 7-11 7z"/></svg>
+          </button>
+          <div class="hero-dots">
+            <button type="button" class="hero-dot" aria-label="Show Austin skyline" aria-current="true"></button>
+            <button type="button" class="hero-dot" aria-label="Show Texas Hill Country"></button>
+            <button type="button" class="hero-dot" aria-label="Show New Braunfels river"></button>
           </div>
         </div>
       </div>
@@ -266,7 +280,7 @@
       <div class="footer-bottom">
         <p>&copy; 2026 Cottage Rose Property Management. All rights reserved.</p>
         <p>TREC License&nbsp;#9017330-BB</p>
-        <p>Skyline photo: <a href="https://commons.wikimedia.org/wiki/File:Austin,_Texas_Skyline_2018.jpg">Sk5893</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</p>
+        <p>Photos via Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Austin,_Texas_Skyline_2018.jpg">Austin skyline</a> by Sk5893 (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>); <a href="https://commons.wikimedia.org/wiki/File:Hill_Country_near_Garner_State_Park_IMG_4288.JPG">Hill Country</a> by Billy Hathorn (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>); <a href="https://commons.wikimedia.org/wiki/File:Comal_River_in_Landa_Park.jpg">Comal River</a> by Larry D. Moore (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)</p>
       </div>
     </div>
   </footer>
