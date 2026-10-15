@@ -58,7 +58,6 @@
   var slides = document.querySelectorAll(".hero-slide");
   if (slides.length > 1) {
     var dots = document.querySelectorAll(".hero-dot");
-    var pauseBtn = document.querySelector(".hero-pause");
     var current = 0;
     var timer = null;
     var INTERVAL = 10000;
@@ -70,24 +69,14 @@
     };
     var stop = function () { clearInterval(timer); timer = null; };
     var play = function () { stop(); timer = setInterval(function () { show(current + 1); }, INTERVAL); };
-    var setPaused = function (paused) {
-      pauseBtn.classList.toggle("is-paused", paused);
-      pauseBtn.setAttribute("aria-label", paused ? "Play slideshow" : "Pause slideshow");
-      if (paused) { stop(); } else { play(); }
-    };
 
-    pauseBtn.addEventListener("click", function () { setPaused(!pauseBtn.classList.contains("is-paused")); });
     dots.forEach(function (d, n) {
-      d.addEventListener("click", function () {
-        show(n);
-        if (!pauseBtn.classList.contains("is-paused")) { play(); }
-      });
+      d.addEventListener("click", function () { show(n); play(); });
     });
     document.addEventListener("visibilitychange", function () {
-      if (document.hidden) { stop(); }
-      else if (!pauseBtn.classList.contains("is-paused")) { play(); }
+      if (document.hidden) { stop(); } else { play(); }
     });
-    setPaused(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    play();
   }
 
   /* ---------- contact form (Formspree AJAX) ---------- */

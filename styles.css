@@ -273,11 +273,7 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 
 /* slideshow controls */
 .hero-controls { position: absolute; right: var(--gutter); bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
-.hero-pause, .hero-dot { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; background: transparent; border: 0; color: var(--white); cursor: pointer; }
-.hero-pause { border: 2px solid var(--white); transition: background-color 0.18s ease, color 0.18s ease; }
-.hero-pause:hover { background: var(--white); color: var(--navy); }
-.hero-pause .i-play, .hero-pause.is-paused .i-pause { display: none; }
-.hero-pause.is-paused .i-play { display: inline; }
+.hero-dot { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; background: transparent; border: 0; color: var(--white); cursor: pointer; }
 .hero-dots { display: flex; }
 .hero-dot::before { content: ""; width: 32px; height: 3px; background: var(--white); opacity: 0.45; transition: opacity 0.2s ease, height 0.2s ease; }
 .hero-dot:hover::before { opacity: 0.8; }
