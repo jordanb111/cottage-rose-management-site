@@ -235,8 +235,8 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   transition: opacity 1.2s ease;
 }
 .hero-slide.is-active { opacity: 1; }
-.hero-slide:nth-child(2) { object-position: center 40%; }
-.hero-slide:nth-child(3) { object-position: center 55%; }
+.hero-slide:nth-child(2) { object-position: center 66%; }
+.hero-slide:nth-child(3) { object-position: center 50%; }
 @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
 
 /* soft navy tint, strongest behind the text and fading out across the skyline */
@@ -262,8 +262,8 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
 @media (max-width: 699px) {
   .hero-slide { object-position: 56% 30%; }
-  .hero-slide:nth-child(2) { object-position: 62% 40%; }
-  .hero-slide:nth-child(3) { object-position: 52% 55%; }
+  .hero-slide:nth-child(2) { object-position: 78% 66%; }
+  .hero-slide:nth-child(3) { object-position: 50% 50%; }
   .hero-copy .lede { font-size: 1.25rem; }
 }
 @media (min-width: 900px) {
