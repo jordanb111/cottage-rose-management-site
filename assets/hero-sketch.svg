@@ -2,7 +2,7 @@
   <title id="hsTitle">Architectural line sketch of a small multifamily property</title>
   <desc id="hsDesc">A minimal single-line architectural elevation drawing of a duplex-style residential building with a pitched roof, symmetrical windows, and a shared entry walk.</desc>
 
-  <g fill="none" stroke="#1A1D1A" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round">
+  <g fill="none" stroke="#14304A" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round">
     <!-- ground line -->
     <line x1="60" y1="520" x2="580" y2="520"/>
 
@@ -55,7 +55,7 @@
   </g>
 
   <!-- registration marks, drafting-style accents -->
-  <g stroke="#A3926B" stroke-width="1.25" fill="none">
+  <g stroke="#14304A" stroke-width="1.25" fill="none">
     <line x1="60" y1="510" x2="60" y2="530"/>
     <line x1="580" y1="510" x2="580" y2="530"/>
     <line x1="50" y1="520" x2="70" y2="520" opacity="0"/>
