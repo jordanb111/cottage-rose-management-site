@@ -241,6 +241,7 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .hero .btn-ghost:hover { background: var(--white); color: var(--navy); }
 .hero a:focus-visible { outline-color: var(--white); }
 .hero-headline { max-width: 20em; margin-bottom: 1.5rem; }
+.hero-headline { -webkit-text-stroke: 6px var(--ink); paint-order: stroke fill; stroke-linejoin: round; }
 .hero-headline::after { content: ""; display: block; width: 96px; height: 6px; margin-top: 1rem; background: var(--gold); }
 .hero-copy .lede { margin-bottom: 0; max-width: 52ch; font-size: 1.5rem; font-weight: 500; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
