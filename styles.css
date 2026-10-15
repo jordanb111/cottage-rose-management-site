@@ -311,7 +311,8 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 
 /* ---------- audience ---------- */
 .audience-section .container { display: grid; gap: 3rem var(--gutter); align-items: center; }
-.audience-visual { background: var(--gray); padding: 1.5rem; }
+.audience-visual { margin: 0; }
+.audience-visual img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 @media (min-width: 900px) {
   .audience-section .container { grid-template-columns: repeat(12, 1fr); }
   .audience-visual { grid-column: span 5; }
