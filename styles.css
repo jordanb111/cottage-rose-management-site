@@ -186,7 +186,7 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.75rem;
   color: var(--navy);
 }
 .nav-toggle svg { width: 24px; height: 24px; }
@@ -253,6 +253,10 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .hero-headline::after { content: ""; display: block; width: 96px; height: 6px; margin-top: 1rem; background: var(--gold); }
 .hero-copy .lede { margin-bottom: 0; max-width: 52ch; font-size: 1.5rem; font-weight: 500; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+@media (max-width: 699px) {
+  .hero-bg { object-position: 56% 30%; }
+  .hero-copy .lede { font-size: 1.25rem; }
+}
 @media (min-width: 900px) {
   .hero .container { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
   .hero-copy { grid-column: 1 / span 10; }
@@ -517,6 +521,7 @@ textarea { resize: vertical; min-height: 128px; }
 .footer-brand { color: var(--white); margin-bottom: 1rem; }
 .site-footer h2 { font-size: 1rem; color: var(--white); margin-bottom: 1rem; }
 .site-footer a { color: var(--white); text-decoration: none; }
+.site-footer li a { display: inline-block; padding: 0.75rem 0; margin: -0.75rem 0; }
 .site-footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .site-footer li { margin-bottom: 0.75rem; }
 .footer-bottom {
