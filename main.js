@@ -15,6 +15,15 @@
       document.body.style.overflow = isOpen ? "hidden" : "";
     });
 
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && mainNav.classList.contains("is-open")) {
+        mainNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+        navToggle.focus();
+      }
+    });
+
     mainNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         mainNav.classList.remove("is-open");
@@ -84,7 +93,7 @@
         if (response.ok) {
           form.reset();
           form.hidden = true;
-          if (successPanel) successPanel.hidden = false;
+          if (successPanel) { successPanel.hidden = false; successPanel.focus(); }
           if (statusEl) statusEl.className = "form-status";
           if (submitBtn) {
             submitBtn.disabled = false;

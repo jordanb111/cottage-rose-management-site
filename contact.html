@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#FAF6EE">
   <title>Contact Cottage Rose Property Management | Central Texas</title>
   <meta name="description" content="Tell us about your property. Cottage Rose Property Management follows up within one business day on residential, multifamily, and commercial properties across Central Texas &mdash; New Braunfels, San Antonio, San Marcos, and Austin.">
   <link rel="canonical" href="https://cottagerosepm.com/contact.html">
@@ -19,7 +21,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a href="index.html" class="brand">
+      <a href="index.html" class="brand" translate="no">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 34 L32 18 L50 34" stroke="#1A1D1A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -42,7 +44,7 @@
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
   </header>
@@ -52,8 +54,8 @@
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow">Contact</span>
-        <h1>Tell us about your property.</h1>
-        <p class="lede">We'll follow up within one business day.</p>
+        <h1>Tell Us About Your Property.</h1>
+        <p class="lede">We’ll follow up within one business day.</p>
       </div>
     </section>
 
@@ -76,7 +78,7 @@
                 </div>
                 <div class="form-row">
                   <label for="email">Email <span aria-hidden="true">*</span></label>
-                  <input type="email" id="email" name="email" required autocomplete="email">
+                  <input type="email" id="email" name="email" required autocomplete="email" spellcheck="false">
                 </div>
               </div>
 
@@ -87,7 +89,7 @@
                 </div>
                 <div class="form-row">
                   <label for="property-type">Property Type <span aria-hidden="true">*</span></label>
-                  <select id="property-type" name="property_type" required>
+                  <select id="property-type" name="property_type" required autocomplete="off">
                     <option value="" disabled selected>Select one&hellip;</option>
                     <option value="Residential">Residential</option>
                     <option value="Multifamily">Multifamily</option>
@@ -100,7 +102,7 @@
               <div class="form-row-group cols-2">
                 <div class="form-row">
                   <label for="units">Number of Units <span aria-hidden="true">*</span></label>
-                  <input type="text" id="units" name="units" required placeholder="e.g. 1, 4, 24, 100">
+                  <input type="text" id="units" name="units" required autocomplete="off" inputmode="numeric" placeholder="e.g. 24…">
                 </div>
                 <div class="form-row">
                   <label for="address">Property Address(es) <span aria-hidden="true">*</span></label>
@@ -110,7 +112,7 @@
 
               <div class="form-row">
                 <label for="source">How did you hear about us? <span aria-hidden="true">*</span></label>
-                <select id="source" name="source" required>
+                <select id="source" name="source" required autocomplete="off">
                   <option value="" disabled selected>Select one&hellip;</option>
                   <option value="Referral">Referral</option>
                   <option value="Search">Search</option>
@@ -121,7 +123,7 @@
 
               <div class="form-row">
                 <label for="message">Message <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" required placeholder="Tell us a bit about your property and what you're looking for."></textarea>
+                <textarea id="message" name="message" required autocomplete="off" placeholder="Describe your property and what you need…"></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary">Send Message</button>
@@ -129,21 +131,21 @@
               <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
             </form>
 
-            <div id="form-success" class="form-success-panel" hidden>
-              <h3>Thank you!</h3>
-              <p>We've received your request and will reach out shortly.</p>
+            <div id="form-success" class="form-success-panel" tabindex="-1" role="status" hidden>
+              <h2 class="as-h3">Thank You!</h2>
+              <p>We’ve received your request and will reach out shortly.</p>
             </div>
           </div>
 
           <aside class="contact-info-card reveal">
-            <h3>What to expect</h3>
+            <h2 class="as-h3">What to Expect</h2>
             <ul class="contact-list">
               <li>
                 <span class="label">Response Time</span>
                 We follow up within one business day.
               </li>
               <li>
-                <span class="label">Who You'll Talk To</span>
+                <span class="label">Who You’ll Talk To</span>
                 Your message goes straight to our local team &mdash; no call center, no middleman.
               </li>
               <li>
@@ -163,7 +165,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="index.html" class="footer-brand">
+          <a href="index.html" class="footer-brand" translate="no">
             <span class="brand-mark" aria-hidden="true">
               <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 34 L32 18 L50 34" stroke="#FDFCF9" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -175,14 +177,14 @@
           <p>Local, in-house leasing and maintenance for residential, multifamily, and commercial properties across Central Texas, home-based in New Braunfels.</p>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h2>Contact</h2>
           <ul>
             <li><a href="contact.html">Send us a message</a></li>
             <li>We respond within one business day.</li>
           </ul>
         </div>
         <div>
-          <h4>Service Area</h4>
+          <h2>Service Area</h2>
           <ul>
             <li>New Braunfels</li>
             <li>San Antonio</li>
