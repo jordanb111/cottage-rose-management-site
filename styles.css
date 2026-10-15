@@ -383,8 +383,8 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .pillar h2 { margin: 0; font-size: clamp(1.5rem, 2.5vw, 2rem); }
 .pillar p { margin: 0; }
 .pillar ul { margin-top: 0.5rem; }
-.pillar li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; }
-.pillar li::before { content: ""; position: absolute; left: 0; top: 0.4rem; width: 0.75rem; height: 0.75rem; border: 2px solid var(--gold); }
+.pillar li { position: relative; padding-left: 1.75rem; margin-bottom: 0.75rem; }
+.pillar li::before { content: ""; position: absolute; left: 0; top: 0.25rem; width: 1rem; height: 1rem; border: 2px solid var(--gold); }
 @media (min-width: 860px) {
   .pillar { grid-template-columns: repeat(12, 1fr); align-items: start; }
   .pillar h2 { grid-column: 1 / span 4; grid-row: 1; }
@@ -404,13 +404,41 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .comparison-col { border-top: 2px solid var(--white); padding-top: 1.5rem; }
 .comparison-col h3 { font-size: 1.25rem; margin-bottom: 1rem; }
 .comparison-col.us { border-top-color: var(--gold); }
-.comparison-col li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; }
-.comparison-col li::before { content: ""; position: absolute; left: 0; top: 0.4rem; width: 0.75rem; height: 0.75rem; border: 2px solid var(--white); }
+.comparison-col li { position: relative; padding-left: 1.75rem; margin-bottom: 0.75rem; }
+.comparison-col li::before { content: ""; position: absolute; left: 0; top: 0.25rem; width: 1rem; height: 1rem; border: 2px solid var(--white); }
+
+/* check marks inside the squares, like ticking off a list */
+.pillar li::after,
+.tag::after,
+.comparison-col.us li::after {
+  content: "";
+  position: absolute;
+  left: 5.5px;
+  top: 6.5px;
+  width: 5px;
+  height: 9px;
+  border: solid var(--navy);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.comparison-col.us li::after { border-color: var(--white); }
+/* the typical-model column lists drawbacks, so it gets an X instead of a tick */
+.comparison-col.them li::after {
+  content: "";
+  position: absolute;
+  left: 3.5px;
+  top: 7.5px;
+  width: 9px;
+  height: 9px;
+  background:
+    linear-gradient(45deg, transparent calc(50% - 1px), var(--white) calc(50% - 1px), var(--white) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(-45deg, transparent calc(50% - 1px), var(--white) calc(50% - 1px), var(--white) calc(50% + 1px), transparent calc(50% + 1px));
+}
 
 .property-types { display: grid; gap: 0.75rem var(--gutter); }
 @media (min-width: 700px) { .property-types { grid-template-columns: 1fr 1fr; } }
-.tag { position: relative; padding-left: 1.5rem; font-weight: 500; }
-.tag::before { content: ""; position: absolute; left: 0; top: 0.4rem; width: 0.75rem; height: 0.75rem; border: 2px solid var(--gold); }
+.tag { position: relative; padding-left: 1.75rem; font-weight: 500; }
+.tag::before { content: ""; position: absolute; left: 0; top: 0.25rem; width: 1rem; height: 1rem; border: 2px solid var(--gold); }
 
 /* ---------- contact ---------- */
 .contact-layout { display: grid; gap: 3rem var(--gutter); }
